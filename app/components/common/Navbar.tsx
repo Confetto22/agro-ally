@@ -1,21 +1,95 @@
 import { Button } from "../ui/button";
 import { IoMenu } from "react-icons/io5";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "../ui/sheet";
+import { Link } from "react-router";
+
+const navLinks = [
+  {
+    ref: "Home",
+    refLink: "/",
+  },
+  {
+    ref: "About",
+    refLink: "/about-us",
+  },
+  {
+    ref: "Services",
+    refLink: "/",
+  },
+  {
+    ref: "Case Studies",
+    refLink: "/",
+  },
+  {
+    ref: "Projects",
+    refLink: "/",
+  },
+];
 
 const Navbar = () => {
   return (
-    <nav className="bg-background py-4 px-6 flex items-center justify-between shadow-xl">
+    <nav className="bg-background md:px-9 py-4 px-6 flex items-center justify-between shadow-xl">
       <img
         src="https://res.cloudinary.com/dv9aqxptd/image/upload/v1748128810/agro-ally/Agro_PNG_dgwskj.png"
         alt="agro ally"
-        className="max-w-[70px]"
+        className="max-w-[80px]"
       />
-      <Button
-        className="cursor-pointer  bg-primary text-secondary hover:bg-secondary hover:text-primary 
-      hover:border-primary border
-      transition-colors duration-300"
-      >
-        <IoMenu className="" />
-      </Button>
+
+      <menu className="flex items-center gap-4">
+        {navLinks.map((navLink) => (
+          <Link
+            to={navLink.refLink}
+            className="text-[1.1rem] hover:text-chart-4 ease-in duration-200"
+          >
+            {navLink.ref}
+          </Link>
+        ))}
+      </menu>
+
+      <div className="flex flex-col items-start">
+        <Link to={"#"}>info@agro-ally.com</Link>
+        <Link to={"#"}>+233(0) 206-140-215</Link>
+      </div>
+
+      <Sheet>
+        <SheetTrigger
+          asChild
+          className="cursor-pointer  bg-primary text-secondary hover:bg-secondary hover:text-primary 
+              hover:border-primary border
+              transition-colors duration-300 p-2 rounded-sm shadow-xl md:hidden"
+        >
+          <IoMenu className="text-[2.9rem]" />
+        </SheetTrigger>
+
+        <SheetContent className="p-4">
+          <SheetHeader className="flex ">
+            <img
+              src="https://res.cloudinary.com/dv9aqxptd/image/upload/v1748128810/agro-ally/Agro_PNG_dgwskj.png"
+              alt="agro ally"
+              className="max-w-[120px]"
+            />
+          </SheetHeader>
+          <hr />
+          <ul className=" w-full flex flex-col items-start h-[50%] gap-5  py-5">
+            {navLinks.map((link) => (
+              <Link
+                to={"#"}
+                className="hover:text-[var(--main-green)] ease-in duration-200"
+              >
+                {link.ref}
+              </Link>
+            ))}
+          </ul>
+        </SheetContent>
+      </Sheet>
     </nav>
   );
 };

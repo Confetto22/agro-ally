@@ -10,6 +10,7 @@ import { FaRegLightbulb } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa6";
 import { RiLeafLine } from "react-icons/ri";
 import { IoPersonOutline } from "react-icons/io5";
+import CaseStudies from "~/components/common/CaseStudies";
 
 const chooseValues = [
   {
@@ -57,6 +58,7 @@ export default function Home() {
             mainhead={"We have the experience to get the job done"}
             subStyle={"border-[var(--main-green)] text-[var(--main-green)] "}
             mainStyle={"md:text-[2rem] capitalize font-[800]"}
+            divStyle="items-start"
           />
           <div className="allChooseUs grid grid-cols-1 gap-8">
             {chooseValues.map((singleValue) => (
@@ -65,7 +67,7 @@ export default function Home() {
                 className="singleChoose max-w-[550px] flex flex-col items-start gap-3"
               >
                 <h2 className="flex text-[1.4rem] items-center gap-2 font-[600]">
-                  <span className="text-[2rem] text-[var(--main-green)]">
+                  <span className="text-[1.8rem] bg-[var(--light-green)] text-[var(--main-green)] p-2 rounded-full">
                     {singleValue.icon}
                   </span>{" "}
                   {singleValue.name}
@@ -76,6 +78,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <CaseStudies />
     </main>
   );
 }

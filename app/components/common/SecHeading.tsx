@@ -14,7 +14,7 @@ const SecHeading = ({
   divStyle,
 }: headingTypes) => {
   return (
-    <div className={`${divStyle} secheading flex flex-col items-start gap-2`}>
+    <div className={` secheading flex flex-col  gap-2 ${divStyle}`}>
       <p
         className={`${subStyle} border-2  px-6 text-[1.1rem] py-2 rounded-4xl  capitalize font-[500]`}
       >

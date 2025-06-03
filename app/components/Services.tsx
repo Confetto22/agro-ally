@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper/modules";
+import Stats from "./Stats";
 
 const services = [
   {
@@ -32,12 +33,14 @@ type Props = {};
 
 const Services = () => {
   return (
-    <section className="px-7 py-24 flex flex-col items-start gap-8">
+    <section className="px-7 py-24 pb-48 flex flex-col items-start gap-8">
+      {/* <Stats /> */}
       <SecHeading
         subhead={"our services"}
         mainhead={"We Offers Eco & Agriculture Services"}
         subStyle={"border-[var(--main-green)] text-[var(--main-green)] "}
         mainStyle={""}
+        divStyle="items-start"
       />
 
       <div className="allServices grid grod-cols-1 gap-y-8">

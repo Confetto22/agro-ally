@@ -12,7 +12,7 @@ const Welcome = () => {
           className="w-full "
         />
       </div>
-      <div className="px-6 py-12 flex flex-col items-start gap-7 font-[300] md:w-[50%] max-w-[500px] md:text-[1.1rem]">
+      <div className="px-6 py-12 flex flex-col items-start gap-7 font-[300] md:w-[50%] md:max-w-[500px] md:text-[1.1rem]">
         <h2 className="text-black text-[1.8rem] md:text-[2.5rem] font-[700] leading-[2rem] md:leading-[2.8rem] md:max-w-[500px]">
           Welcome to the world of Agro Ally Solutions
         </h2>
