@@ -2,7 +2,7 @@ import PageHead from "~/components/common/PageHead";
 import { Link } from "react-router";
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 import { useState } from "react";
-import { allCases } from "~/components/common/projects";
+import { allProjects } from "~/components/common/projects";
 
 type Props = {};
 
@@ -16,7 +16,7 @@ const Cases = (props: Props) => {
         pageDesc="Best Awards Winning Organic Farming"
       />
       <div className="allCases grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 px-8 py-24">
-        {allCases.map((caseItem) => (
+        {allProjects.map((caseItem) => (
           <div
             key={caseItem.name}
             onMouseOver={() => setHovered(caseItem.name)}

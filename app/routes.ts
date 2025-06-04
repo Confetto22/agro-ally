@@ -9,7 +9,7 @@ export default [
   layout("./components/layout.tsx", [
     index("routes/home.tsx"),
     route("/about-us", "routes/about.tsx"),
-    route("/projects", "routes/Cases.tsx"),
+    route("/projects", "routes/Projects.tsx"),
     route("/services", "routes/servicesPage.tsx"),
     route("/contact", "routes/Contact.tsx"),
     route("/services/:dynamicService", "routes/ServiceDetail.tsx", {
