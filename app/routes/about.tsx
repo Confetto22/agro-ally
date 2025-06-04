@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import KnowUs from "~/components/aboutpage/KnowUs";
 import OurValue from "~/components/aboutpage/OurValue";
 import Testimonials from "~/components/aboutpage/Testimonials";
+import PageHead from "~/components/common/PageHead";
 import SecHeading from "~/components/common/SecHeading";
 import Stats from "~/components/Stats";
 
@@ -34,15 +35,6 @@ const faqValues = [
     answer:
       "No, we prioritize organic farming and do not use harmful chemicals or pesticides. We rely on natural methods to grow our produce sustainably.",
   },
-  //   {
-  //     question: "how can i connect with the church?",
-  //     answer:
-  //       "We would love to connect with you! You can visit us in person, call us, or email us. You can also follow us on social media and sign up for our newsletter to stay updated on events and services.",
-  //     phone: "+233(0) 244-496-968",
-  //     phoneLink: "tel:+233244496968",
-  //     email: "info@mysteryembassy.com",
-  //     emailLink: "mailto:info@mysteryembassy.com",
-  //   },
 ];
 
 type Props = {};
@@ -50,16 +42,11 @@ type Props = {};
 const About = () => {
   return (
     <section className="pb-24">
-      <div className="pageHead bg-[url('https://res.cloudinary.com/dv9aqxptd/image/upload/v1748947834/agro-ally/qQ7rFB5eVVBjturZ7t2PLrcFLI_h8xy5q.avif')] bg-center bg-cover">
-        <div className="cover bg-gradient-to-r from-[#0e2207ce] to-[#0000008f]  min-h-[60vh] p-8 text-white flex flex-col justify-center">
-          <h2 className="text-[2.5rem] md:text-[3.2rem] font-[700]">
-            About Us
-          </h2>
-          <p className="font-[300] text-[1.1rem]">
-            Best Awards Winning Organic Farming
-          </p>
-        </div>
-      </div>
+      <PageHead
+        pageBg="bg-[url('https://res.cloudinary.com/dv9aqxptd/image/upload/v1748947834/agro-ally/qQ7rFB5eVVBjturZ7t2PLrcFLI_h8xy5q.avif')]"
+        pageName="About Us"
+        pageDesc="Best Awards Winning Organic Farming"
+      />
       <div className="intro px-9 py-24  flex flex-col items-center gap-8 md:flex-row md:items-center md:justify-center md:gap-[2rem]">
         <div className="intro_text font-[400] flex flex-col items-start gap-7 md:w-[50%]">
           <SecHeading
@@ -94,17 +81,17 @@ const About = () => {
         </div>
       </div>
       <KnowUs />
-      <section className="founder px-8 py-24">
-        <div className="sec_text  flex flex-col md:flex-row gap-6">
-          <div className="picBox md:w-[50%] relative p-4 px-15 rounded-md">
+      <section className="founder  py-24">
+        <div className="sec_text  flex flex-col md:flex-row md:items-center  px-8 gap-14">
+          <div className="picBox relative md:w-[50%]  flex justify-end w-full rounded-md">
             <img
               src="https://res.cloudinary.com/dv9aqxptd/image/upload/v1748972030/agro-ally/WhatsApp_Image_2025-06-03_at_18.28.26_6c5e01a5_tngsxb.jpg"
               alt="Derrick Acer"
-              className="w-full h-full object-cover object-top aspect-square rounded-md"
+              className=" h-full object-cover object-top aspect-[8/10] md:aspect-[8/7] rounded-md md:w-full w-[90%] "
             />
-            <div className="bg-amber-500 absolute bottom-0 left-0 px-8 py-5 rounded-sm shadow-xl">
-              <p className="font-[700] text-[1.3rem]">Derrick Kwabena Essah</p>
-              <p className="font-[500]">C.E.O</p>
+            <div className="bg-chart-4 absolute bottom-[-20px] left-[-10px] px-8 py-5 rounded-sm shadow-xl">
+              <p className="font-[700] text-[1.2rem]">Derrick Kwabena Essah</p>
+              <p className="font-[500] text-[.9rem]">C.E.O</p>
             </div>
           </div>
           <div className="md:w-[40%] flex flex-col items-start gap-6">

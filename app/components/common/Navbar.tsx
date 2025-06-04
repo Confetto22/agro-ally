@@ -21,17 +21,21 @@ const navLinks = [
     refLink: "/about-us",
   },
   {
-    ref: "Services",
-    refLink: "/",
+    ref: "Contact",
+    refLink: "/contact",
   },
   {
-    ref: "Case Studies",
-    refLink: "/",
+    ref: "Services",
+    refLink: "/services",
   },
   {
     ref: "Projects",
-    refLink: "/",
+    refLink: "/projects",
   },
+  // {
+  //   ref: "Projects",
+  //   refLink: "/",
+  // },
 ];
 
 const Navbar = () => {
@@ -43,7 +47,7 @@ const Navbar = () => {
         className="max-w-[80px]"
       />
 
-      <menu className="flex items-center gap-4">
+      <menu className=" items-center gap-4 hidden md:flex">
         {navLinks.map((navLink) => (
           <Link
             to={navLink.refLink}
@@ -54,7 +58,7 @@ const Navbar = () => {
         ))}
       </menu>
 
-      <div className="flex flex-col items-start">
+      <div className="md:flex flex-col items-start hidden ">
         <Link to={"#"}>info@agro-ally.com</Link>
         <Link to={"#"}>+233(0) 206-140-215</Link>
       </div>
@@ -80,12 +84,14 @@ const Navbar = () => {
           <hr />
           <ul className=" w-full flex flex-col items-start h-[50%] gap-5  py-5">
             {navLinks.map((link) => (
-              <Link
-                to={"#"}
-                className="hover:text-[var(--main-green)] ease-in duration-200"
-              >
-                {link.ref}
-              </Link>
+              <SheetClose asChild>
+                <Link
+                  to={link.refLink}
+                  className="hover:text-[var(--main-green)] ease-in duration-200"
+                >
+                  {link.ref}
+                </Link>
+              </SheetClose>
             ))}
           </ul>
         </SheetContent>

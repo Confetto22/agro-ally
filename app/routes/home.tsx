@@ -10,7 +10,7 @@ import { FaRegLightbulb } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa6";
 import { RiLeafLine } from "react-icons/ri";
 import { IoPersonOutline } from "react-icons/io5";
-import CaseStudies from "~/components/common/CaseStudies";
+import HomeProjects from "~/components/common/HomeProjects";
 
 const chooseValues = [
   {
@@ -78,7 +78,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <CaseStudies />
+      <HomeProjects />
     </main>
   );
 }

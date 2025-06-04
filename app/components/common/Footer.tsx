@@ -67,7 +67,11 @@ const resourceLinks = [
   },
   {
     ref: "About",
-    refLink: "/",
+    refLink: "/about-us",
+  },
+  {
+    ref: "Contact",
+    refLink: "/contact",
   },
   {
     ref: "Services",
@@ -75,12 +79,12 @@ const resourceLinks = [
   },
   {
     ref: "Case Studies",
-    refLink: "/",
+    refLink: "/case-study",
   },
-  {
-    ref: "Projects",
-    refLink: "/",
-  },
+  // {
+  //   ref: "Projects",
+  //   refLink: "/",
+  // },
 ];
 
 const year = new Date().getFullYear();
