@@ -75,11 +75,11 @@ const resourceLinks = [
   },
   {
     ref: "Services",
-    refLink: "/",
+    refLink: "/services",
   },
   {
-    ref: "Case Studies",
-    refLink: "/case-study",
+    ref: "projects",
+    refLink: "/projects",
   },
   // {
   //   ref: "Projects",

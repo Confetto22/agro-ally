@@ -41,7 +41,9 @@ const ServicesPage = () => {
                 {service.title}
               </p>
               <hr className="w-full" />
-              <p className="text-stone-200 text-[.9rem]">{service.desc}</p>
+              <p className="text-stone-200 text-[.9rem]">
+                {service.desc[0].chooseUs.p1.slice(0, 300)}...
+              </p>
             </div>
           </Link>
         ))}

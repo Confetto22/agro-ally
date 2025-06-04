@@ -41,11 +41,13 @@ const navLinks = [
 const Navbar = () => {
   return (
     <nav className="bg-background md:px-9 py-4 px-6 flex items-center justify-between shadow-xl">
-      <img
-        src="https://res.cloudinary.com/dv9aqxptd/image/upload/v1748128810/agro-ally/Agro_PNG_dgwskj.png"
-        alt="agro ally"
-        className="max-w-[80px]"
-      />
+      <Link to={"/"}>
+        <img
+          src="https://res.cloudinary.com/dv9aqxptd/image/upload/v1748128810/agro-ally/Agro_PNG_dgwskj.png"
+          alt="agro ally"
+          className="max-w-[80px]"
+        />
+      </Link>
 
       <menu className=" items-center gap-4 hidden md:flex">
         {navLinks.map((navLink) => (
